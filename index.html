@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Onic Free Internet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#050a0f; --surface:#0b1520; --cyan:#00f5ff; --green:#00ff88; --glow:0 0 18px #00f5ff88,0 0 40px #00f5ff33; }
+    body { background:var(--bg); color:#c8f0ff; font-family:'Share Tech Mono',monospace; min-height:100vh; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+    body::before { content:''; position:fixed; inset:0; background-image:linear-gradient(rgba(0,245,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,255,0.04) 1px,transparent 1px); background-size:40px 40px; pointer-events:none; z-index:0; }
+    .card { position:relative; z-index:1; background:var(--surface); border:1px solid #0ff3; border-radius:16px; padding:44px 40px 40px; max-width:460px; width:90vw; text-align:center; box-shadow:0 0 60px #00f5ff18,inset 0 0 30px #00f5ff08; }
+    .card::before { content:''; position:absolute; top:-1px; left:20%; right:20%; height:2px; background:linear-gradient(90deg,transparent,var(--cyan),transparent); box-shadow:var(--glow); }
+    .icon { width:64px; height:64px; margin:0 auto 20px; border:1.5px solid var(--cyan); border-radius:14px; display:flex; align-items:center; justify-content:center; animation:pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 14px #00f5ff66,0 0 30px #00f5ff22}50%{box-shadow:0 0 28px #00f5ffaa,0 0 60px #00f5ff44} }
+    .icon svg { width:30px; height:30px; fill:var(--cyan); }
+    h1 { font-family:'Orbitron',sans-serif; font-size:1.4rem; font-weight:900; letter-spacing:.1em; color:var(--cyan); text-shadow:var(--glow); margin-bottom:6px; text-transform:uppercase; }
+    .tagline { font-size:.75rem; color:var(--green); letter-spacing:.2em; margin-bottom:24px; text-transform:uppercase; }
+    .desc { background:#071318; border:1px solid #0ff2; border-radius:10px; padding:16px 18px; margin-bottom:20px; text-align:left; }
+    .desc-title { font-family:'Orbitron',sans-serif; font-size:.68rem; color:var(--cyan); letter-spacing:.15em; margin-bottom:10px; text-transform:uppercase; }
+    .desc p { font-size:.76rem; color:#7abccc; line-height:1.7; }
+    .desc p span { color:#a8dde8; }
+    .file-info { background:#0a1a24; border:1px solid #0ff2; border-radius:10px; padding:14px 18px; margin-bottom:28px; text-align:left; }
+    .file-row { display:flex; justify-content:space-between; font-size:.76rem; color:#4a9aaa; padding:3px 0; }
+    .file-row span:last-child { color:#a0d8e8; }
+    .btn { display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg,#003c4f,#004d66); border:1.5px solid var(--cyan); color:var(--cyan); font-family:'Orbitron',sans-serif; font-size:.8rem; font-weight:700; letter-spacing:.15em; padding:14px 32px; border-radius:10px; cursor:pointer; text-decoration:none; text-transform:uppercase; transition:all .25s; box-shadow:var(--glow); }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 0 32px #00f5ffaa,0 0 80px #00f5ff44; }
+    .btn svg { width:18px; height:18px; fill:var(--cyan); }
+    .footer { margin-top:24px; font-size:.65rem; color:#2a5566; letter-spacing:.15em; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 0 0-6 0zm-4-4 2 2a7.074 7.074 0 0 1 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+    </div>
+    <h1>Dark Tunnel Onic</h1>
+    <p class="tagline">● Free Internet Config File</p>
+    <div class="desc">
+      <div class="desc-title">▸ File Details</div>
+      <p>
+        Ye <span>Dark Tunnel</span> app ki <span>Onic</span> config file hai.<br/>
+        Is file ko import kar ke <span>free internet</span> use kar sakte hain.<br/>
+        File type: <span>VLESS Config · config.dark</span>
+      </p>
+    </div>
+    <div class="file-info">
+      <div class="file-row"><span>FILE NAME</span><span>config.dark</span></div>
+      <div class="file-row"><span>APP</span><span>Dark Tunnel</span></div>
+      <div class="file-row"><span>CONFIG</span><span>Onic Free</span></div>
+      <div class="file-row"><span>STATUS</span><span style="color:#00ff88">● ACTIVE</span></div>
+    </div>
+    <a class="btn" id="dlBtn" href="/config.dark" download="config.dark">
+      <svg viewBox="0 0 24 24"><path d="M12 16l-5-5 1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11l-5 5zm-7 4v-2h14v2H5z"/></svg>
+      Download Onic File
+    </a>
+    <p class="footer">DARK TUNNEL &nbsp;·&nbsp; ONIC FREE INTERNET</p>
+  </div>
+
+  <script>
+    // Force .dark extension on download
+    document.getElementById('dlBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      fetch('/config.dark')
+        .then(r => r.blob())
+        .then(blob => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'config.dark';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+    });
+  </script>
+</body>
+  </html>
+                                       
